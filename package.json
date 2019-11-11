@@ -1,10 +1,10 @@
 {
-  "name": "vscode-ansible",
-  "displayName": "Ansible",
-  "description": "VSCode extension for Ansible",
+  "name": "vscode-ansible-tivrobo",
+  "displayName": "Ansible (Tiv Robo)",
+  "description": "VSCode extension for Ansible (Tiv Robo)",
   "license": "SEE LICENSE IN LICENSE.md",
-  "version": "0.5.2-tivrobo",
-  "publisher": "vscoss",
+  "version": "0.0.1",
+  "publisher": "tivrobo",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.31.0"
@@ -17,7 +17,8 @@
     "ansible",
     "playbook",
     "snippets",
-    "ansible module"
+    "ansible module",
+    "yaml"
   ],
   "aiKey": "c0832760-3476-4e38-8ffc-32624202fcf1",
   "repository": {
@@ -25,23 +26,28 @@
   },
   "homepage": "https://github.com/tivrobo/vscode-ansible/blob/master/README.md",
   "activationEvents": [
-    "onLanguage:yaml",
     "onLanguage:ansible",
-    "onCommand:vscode-ansible.cloudshell",
-    "onCommand:vscode-ansible.playbook-in-docker",
-    "onCommand:vscode-ansible.playbook-in-localansible",
-    "onCommand:vscode-ansible.ssh",
-    "onCommand:vscode-ansible.sync-folder-ssh",
-    "onCommand:vscode-ansible.resource-module-samples"
+    "onLanguage:ansible-yaml",
+    "onLanguage:yaml",
+    "onCommand:vscode-ansible-tivrobo.cloudshell",
+    "onCommand:vscode-ansible-tivrobo.playbook-in-docker",
+    "onCommand:vscode-ansible-tivrobo.playbook-in-localansible",
+    "onCommand:vscode-ansible-tivrobo.ssh",
+    "onCommand:vscode-ansible-tivrobo.sync-folder-ssh",
+    "onCommand:vscode-ansible-tivrobo.resource-module-samples"
   ],
   "main": "./out/extension",
   "contributes": {
     "languages": [
       {
-        "id": "ansible",
+        "id": "ansible-yaml",
         "alias": [
           "ansible",
-          "yaml"
+          "yaml",
+          "ansible-yaml",
+          "ANSIBLE",
+          "YAML",
+          "ANSIBLE-YAML"
         ],
         "extensions": [
           "ansible"
@@ -51,32 +57,32 @@
     ],
     "commands": [
       {
-        "command": "vscode-ansible.cloudshell",
+        "command": "vscode-ansible-tivrobo.cloudshell",
         "title": "Run Ansible Playbook in Cloud Shell",
         "category": "Ansible"
       },
       {
-        "command": "vscode-ansible.playbook-in-docker",
+        "command": "vscode-ansible-tivrobo.playbook-in-docker",
         "title": "Run Ansible Playbook in Docker",
         "category": "Ansible"
       },
       {
-        "command": "vscode-ansible.playbook-in-localansible",
+        "command": "vscode-ansible-tivrobo.playbook-in-localansible",
         "title": "Run Ansible Playbook in Local Ansible",
         "category": "Ansible"
       },
       {
-        "command": "vscode-ansible.ssh",
+        "command": "vscode-ansible-tivrobo.ssh",
         "title": "Run Ansible Playbook Remotely via ssh",
         "category": "Ansible"
       },
       {
-        "command": "vscode-ansible.sync-folder-ssh",
+        "command": "vscode-ansible-tivrobo.sync-folder-ssh",
         "title": "Copy folder to Remote Host",
         "category": "Ansible"
       },
       {
-        "command": "vscode-ansible.resource-module-samples",
+        "command": "vscode-ansible-tivrobo.resource-module-samples",
         "title": "Samples for azure_rm_resource (PREVIEW)",
         "category": "Ansible"
       }
@@ -84,86 +90,126 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "vscode-ansible.playbook-in-docker",
+          "command": "vscode-ansible-tivrobo.playbook-in-docker",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@1"
+          "group": "vscode-ansible-tivrobo@1"
         },
         {
-          "command": "vscode-ansible.playbook-in-localansible",
+          "command": "vscode-ansible-tivrobo.playbook-in-localansible",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@2"
+          "group": "vscode-ansible-tivrobo@2"
         },
         {
-          "command": "vscode-ansible.cloudshell",
+          "command": "vscode-ansible-tivrobo.cloudshell",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@3"
+          "group": "vscode-ansible-tivrobo@3"
         },
         {
-          "command": "vscode-ansible.ssh",
+          "command": "vscode-ansible-tivrobo.ssh",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@4"
+          "group": "vscode-ansible-tivrobo@4"
         },
         {
-          "command": "vscode-ansible.playbook-in-docker",
-          "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@1"
+          "command": "vscode-ansible-tivrobo.playbook-in-docker",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@1"
         },
         {
-          "command": "vscode-ansible.playbook-in-localansible",
-          "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@2"
+          "command": "vscode-ansible-tivrobo.playbook-in-localansible",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@2"
         },
         {
-          "command": "vscode-ansible.cloudshell",
-          "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@3"
+          "command": "vscode-ansible-tivrobo.cloudshell",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@3"
         },
         {
-          "command": "vscode-ansible.ssh",
+          "command": "vscode-ansible-tivrobo.ssh",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@4"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.playbook-in-docker",
           "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@4"
+          "group": "vscode-ansible-tivrobo@1"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.playbook-in-localansible",
+          "when": "resourceLangId == ansible",
+          "group": "vscode-ansible-tivrobo@2"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.cloudshell",
+          "when": "resourceLangId == ansible",
+          "group": "vscode-ansible-tivrobo@3"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.ssh",
+          "when": "resourceLangId == ansible",
+          "group": "vscode-ansible-tivrobo@4"
         }
       ],
       "editor/title/context": [
         {
-          "command": "vscode-ansible.playbook-in-docker",
+          "command": "vscode-ansible-tivrobo.playbook-in-docker",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@1"
+          "group": "vscode-ansible-tivrobo@1"
         },
         {
-          "command": "vscode-ansible.playbook-in-localansible",
+          "command": "vscode-ansible-tivrobo.playbook-in-localansible",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@2"
+          "group": "vscode-ansible-tivrobo@2"
         },
         {
-          "command": "vscode-ansible.cloudshell",
+          "command": "vscode-ansible-tivrobo.cloudshell",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@3"
+          "group": "vscode-ansible-tivrobo@3"
         },
         {
-          "command": "vscode-ansible.ssh",
+          "command": "vscode-ansible-tivrobo.ssh",
           "when": "resourceLangId == yaml",
-          "group": "vscode-ansible@4"
+          "group": "vscode-ansible-tivrobo@4"
         },
         {
-          "command": "vscode-ansible.playbook-in-docker",
-          "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@1"
+          "command": "vscode-ansible-tivrobo.playbook-in-docker",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@1"
         },
         {
-          "command": "vscode-ansible.playbook-in-localansible",
-          "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@2"
+          "command": "vscode-ansible-tivrobo.playbook-in-localansible",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@2"
         },
         {
-          "command": "vscode-ansible.cloudshell",
-          "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@3"
+          "command": "vscode-ansible-tivrobo.cloudshell",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@3"
         },
         {
-          "command": "vscode-ansible.ssh",
+          "command": "vscode-ansible-tivrobo.ssh",
+          "when": "resourceLangId == ansible-yaml",
+          "group": "vscode-ansible-tivrobo@4"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.playbook-in-docker",
           "when": "resourceLangId == ansible",
-          "group": "vscode-ansible@4"
+          "group": "vscode-ansible-tivrobo@1"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.playbook-in-localansible",
+          "when": "resourceLangId == ansible",
+          "group": "vscode-ansible-tivrobo@2"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.cloudshell",
+          "when": "resourceLangId == ansible",
+          "group": "vscode-ansible-tivrobo@3"
+        },
+        {
+          "command": "vscode-ansible-tivrobo.ssh",
+          "when": "resourceLangId == ansible",
+          "group": "vscode-ansible-tivrobo@4"
         }
       ]
     },

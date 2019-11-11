@@ -14,7 +14,7 @@ import * as path from 'path';
 
 
 export interface Settings {
-    ansible: {
+    ansible-yaml: {
         credentialsFile: string,
         terminalInitCommand: string,
         credentialsConfigured: boolean,
@@ -76,8 +76,8 @@ connection.onHover((textDocumentPositionParams) => {
 connection.onDidChangeConfiguration((didChangeConfigurationParams) => {
     var clientSettings = <Settings>didChangeConfigurationParams.settings;
 
-    enableHover = clientSettings.ansible.hover;
-    enableValidation = clientSettings.ansible.validation;
+    enableHover = clientSettings.ansible-yaml.hover;
+    enableValidation = clientSettings.ansible-yaml.validation;
     updateConfiguration();
 })
 
