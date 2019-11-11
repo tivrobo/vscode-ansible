@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/vschina/vscode-ansible.git"
+        "url": "https://github.com/tivrobo/vscode-ansible.git"
     },
     "scripts": {
         "installserver": "installServerIntoExtension ../out ./package.json ./tsconfig.json",

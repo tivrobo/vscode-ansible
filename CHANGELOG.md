@@ -8,31 +8,31 @@ All notable changes to the "vscode-ansible" extension will be documented in this
 
 ## 0.5.1
 #### Bug fixing
-- Fixing wrong configuration name. [PR 188](https://github.com/VSChina/vscode-ansible/pull/188)
+- Fixing wrong configuration name. [PR 188](https://github.com/tivrobo/vscode-ansible/pull/188)
 
 ## 0.5.0
 #### New features
-- New command `Samples for azure_rm_resource (PREVIEW)` to generate samples for azure_rm_resource module. [PR 178](https://github.com/VSChina/vscode-ansible/pull/178)
+- New command `Samples for azure_rm_resource (PREVIEW)` to generate samples for azure_rm_resource module. [PR 178](https://github.com/tivrobo/vscode-ansible/pull/178)
 
 #### Bug fixing
-- Syntax highlighting error for parameters after attribute. [Issue 181](https://github.com/VSChina/vscode-ansible/issues/181)
-- Errors in output windows when editing yaml files. [Issue 179](https://github.com/VSChina/vscode-ansible/issues/179)
+- Syntax highlighting error for parameters after attribute. [Issue 181](https://github.com/tivrobo/vscode-ansible/issues/181)
+- Errors in output windows when editing yaml files. [Issue 179](https://github.com/tivrobo/vscode-ansible/issues/179)
 
 #### Thank you
-@asinn826 for refining notification messages. [PR 180](https://github.com/VSChina/vscode-ansible/pull/180)
+@asinn826 for refining notification messages. [PR 180](https://github.com/tivrobo/vscode-ansible/pull/180)
 
 ## 0.4.0
 #### New features
-- Customize docker image name. [PR 166](https://github.com/VSChina/vscode-ansible/pull/166), [Issue 163](https://github.com/VSChina/vscode-ansible/issues/163)
+- Customize docker image name. [PR 166](https://github.com/tivrobo/vscode-ansible/pull/166), [Issue 163](https://github.com/tivrobo/vscode-ansible/issues/163)
 - Yaml Validation, by leveraging [Yaml language server](https://github.com/redhat-developer/yaml-language-server).
 
 #### Bug fixing
-- Storage 403 error when using Cloud Shell. [Issue 133](https://github.com/VSChina/vscode-ansible/issues/133)
-- Comments not work with ansible language. [Issue 154](https://github.com/VSChina/vscode-ansible/issues/154), [Issue 165](https://github.com/VSChina/vscode-ansible/issues/165)
-- Nested list of dictionaries not highlighted. [Issue 168](https://github.com/VSChina/vscode-ansible/issues/168)
+- Storage 403 error when using Cloud Shell. [Issue 133](https://github.com/tivrobo/vscode-ansible/issues/133)
+- Comments not work with ansible language. [Issue 154](https://github.com/tivrobo/vscode-ansible/issues/154), [Issue 165](https://github.com/tivrobo/vscode-ansible/issues/165)
+- Nested list of dictionaries not highlighted. [Issue 168](https://github.com/tivrobo/vscode-ansible/issues/168)
 
 #### Thank you
-@muellerbe for fixing doc typo. [PR 164](https://github.com/VSChina/vscode-ansible/pull/164)
+@muellerbe for fixing doc typo. [PR 164](https://github.com/tivrobo/vscode-ansible/pull/164)
 
 ## 0.3.1
 #### Bug fixing
@@ -40,16 +40,16 @@ All notable changes to the "vscode-ansible" extension will be documented in this
 
 ## 0.3.0
 #### New features
-- Copy saved files automatically to remote host per configuration. [PR 138](https://github.com/VSChina/vscode-ansible/pull/138), [Issue 100](https://github.com/VSChina/vscode-ansible/issues/100), [Issue 120](https://github.com/VSChina/vscode-ansible/issues/120)
-- Reuse SSH per configuration. [PR 130](https://github.com/VSChina/vscode-ansible/pull/130)
-- Language Syntax per file association. [Issue 93](https://github.com/VSChina/vscode-ansible/issues/93)
-- Custom ansible-playbook options.  [Issue 107](https://github.com/VSChina/vscode-ansible/issues/107)
+- Copy saved files automatically to remote host per configuration. [PR 138](https://github.com/tivrobo/vscode-ansible/pull/138), [Issue 100](https://github.com/tivrobo/vscode-ansible/issues/100), [Issue 120](https://github.com/tivrobo/vscode-ansible/issues/120)
+- Reuse SSH per configuration. [PR 130](https://github.com/tivrobo/vscode-ansible/pull/130)
+- Language Syntax per file association. [Issue 93](https://github.com/tivrobo/vscode-ansible/issues/93)
+- Custom ansible-playbook options.  [Issue 107](https://github.com/tivrobo/vscode-ansible/issues/107)
 
 #### Bug fixing/Improvement
-- Fix ssh passphrase not working. [Issue 126](https://github.com/VSChina/vscode-ansible/issues/126)
-- Update docker image tag to reflect ansible version. [Issue 113](https://github.com/VSChina/vscode-ansible/issues/93)
-- Update cloud shell runner to use cloudshell API for provisioning and file uploading. [PR 124](https://github.com/VSChina/vscode-ansible/pull/124)
-- Update code snippets/auto completion to latest Ansible 2.6.1 version. [PR 141](https://github.com/VSChina/vscode-ansible/pull/141)
+- Fix ssh passphrase not working. [Issue 126](https://github.com/tivrobo/vscode-ansible/issues/126)
+- Update docker image tag to reflect ansible version. [Issue 113](https://github.com/tivrobo/vscode-ansible/issues/93)
+- Update cloud shell runner to use cloudshell API for provisioning and file uploading. [PR 124](https://github.com/tivrobo/vscode-ansible/pull/124)
+- Update code snippets/auto completion to latest Ansible 2.6.1 version. [PR 141](https://github.com/tivrobo/vscode-ansible/pull/141)
 
 ## 0.1.5
 Make below improvement:
